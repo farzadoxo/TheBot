@@ -6,8 +6,14 @@ from Components.Embeds.Help import help_embed
 from dotenv import load_dotenv
 import os
 
+
+
 # Define the client
-client = commands.Bot(command_prefix='!',intents=discord.Intents.all())
+client = commands.Bot(command_prefix='!',
+                      intents=discord.Intents.all(),
+                      status=discord.Status.do_not_disturb,
+                      activity=discord.Activity(type=discord.ActivityType.listening,name="🌱 Plants"),)
+
 
 
 # ----------------- Events ----------------- 
