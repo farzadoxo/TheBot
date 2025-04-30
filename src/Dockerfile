@@ -1,5 +1,10 @@
-FROM Python:latest
+FROM python:latest
 
+WORKDIR /src
+
+COPY requirements.txt .
 RUN pip install discord.py
 
-RUN python3 bot.py
+
+
+CMD ["python3","bot.py"]
