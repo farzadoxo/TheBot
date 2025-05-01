@@ -1,10 +1,9 @@
 FROM python:latest
 
-WORKDIR /src
+WORKDIR /home/farzadoxo/Desktop/TheBot/src
 
-COPY requirements.txt .
-RUN pip install discord.py
+COPY . .
 
-
+RUN pip install -r requirements.txt
 
 CMD ["python3","bot.py"]
